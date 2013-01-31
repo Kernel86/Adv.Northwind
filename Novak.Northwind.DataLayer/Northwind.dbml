@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBNovak" Class="NorthwindDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FooteSQLServer;Initial Catalog=DBNovak;Persist Security Info=True;User ID=CMLogin" SettingsObjectName="Novak.Northwind.DataLayer.Properties.Settings" SettingsPropertyName="DBNovakConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="SalesRep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_GetCustomers" Method="SP_GetCustomers">
+    <ElementType Name="SP_GetCustomersResult">
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="SalesRep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetCustomersByCity" Method="SP_GetCustomersByCity">
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="SP_GetCustomersByCityResult">
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="SalesRep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
