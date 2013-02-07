@@ -98,6 +98,12 @@ namespace Novak.Northwind.BusinessLayer
         }
 #endregion
 
+        // Constructors
+        public CCustomer()
+        {
+
+        }
+        
         // Public Methods
         public int Update()
         {
@@ -115,7 +121,46 @@ namespace Novak.Northwind.BusinessLayer
         {
             try
             {
-                throw new NotImplementedException();
+                NorthwindDataContext oDc = new NorthwindDataContext();
+
+                tblCustomer otblCustomer = (from c in oDc.tblCustomers where c.CustomerID == _CustomerID select c).FirstOrDefault();
+
+                oDc.tblCustomers.DeleteOnSubmit(otblCustomer);
+                oDc.SubmitChanges();
+
+                otblCustomer = null;
+                oDc = null;
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Load(tblCustomer otblCustomer)
+        {
+            try
+            {
+                _CustomerID = otblCustomer.CustomerID;
+                _CompanyName = otblCustomer.CompanyName;
+                _ContactName = otblCustomer.ContactName;
+                _ContactTitle = otblCustomer.ContactTitle;
+                _Address = otblCustomer.Address;
+                _City = otblCustomer.City;
+                if (otblCustomer.Region != null)
+                    _Region = otblCustomer.Region;
+                else
+                    _Region = string.Empty;
+                _PostalCode = otblCustomer.PostalCode;
+                _Country = otblCustomer.Country;
+                _Phone = otblCustomer.Phone;
+                _Fax = otblCustomer.Fax;
+                if (otblCustomer.SalesRep != null)
+                    _SalesRep = (int)otblCustomer.SalesRep;
+                else
+                    _SalesRep = 0;
             }
             catch (Exception ex)
             {

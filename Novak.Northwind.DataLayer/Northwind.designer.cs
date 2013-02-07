@@ -30,9 +30,9 @@ namespace Novak.Northwind.DataLayer
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCustomer(Customer instance);
-    partial void UpdateCustomer(Customer instance);
-    partial void DeleteCustomer(Customer instance);
+    partial void InserttblCustomer(tblCustomer instance);
+    partial void UpdatetblCustomer(tblCustomer instance);
+    partial void DeletetblCustomer(tblCustomer instance);
     #endregion
 		
 		public NorthwindDataContext() : 
@@ -65,11 +65,11 @@ namespace Novak.Northwind.DataLayer
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Customer> Customers
+		public System.Data.Linq.Table<tblCustomer> tblCustomers
 		{
 			get
 			{
-				return this.GetTable<Customer>();
+				return this.GetTable<tblCustomer>();
 			}
 		}
 		
@@ -89,7 +89,7 @@ namespace Novak.Northwind.DataLayer
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Customers")]
-	public partial class Customer : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class tblCustomer : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -148,7 +148,7 @@ namespace Novak.Northwind.DataLayer
     partial void OnSalesRepChanged();
     #endregion
 		
-		public Customer()
+		public tblCustomer()
 		{
 			OnCreated();
 		}

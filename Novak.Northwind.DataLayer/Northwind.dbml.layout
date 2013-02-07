@@ -3,7 +3,7 @@
   <DataContextMoniker Name="/NorthwindDataContext" />
   <nestedChildShapes>
     <classShape Id="fb88ba5a-46b6-46d8-a693-f27f39191c8d" absoluteBounds="2.5, 1.125, 2, 3.1170068359375">
-      <DataClassMoniker Name="/NorthwindDataContext/Customer" />
+      <DataClassMoniker Name="/NorthwindDataContext/tblCustomer" />
       <nestedChildShapes>
         <elementListCompartment Id="c9033efc-e2b8-4e2e-a0e0-847fc84bd3c6" absoluteBounds="2.515, 1.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
