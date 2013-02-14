@@ -14,6 +14,7 @@ namespace Novak.Northwind.UserInterface
     public partial class frmNorthwind : Form
     {
         CCustomers _oCustomers;
+        bool _bIsFormLoaded = false;
 
         public frmNorthwind()
         {
@@ -32,6 +33,7 @@ namespace Novak.Northwind.UserInterface
                 _oCustomers.SelectCustomer();
                 dgvCustomers.DataSource = null;
                 dgvCustomers.DataSource = _oCustomers.Items;
+                _bIsFormLoaded = true;
             }
             catch (Exception ex)
             {
@@ -54,6 +56,74 @@ namespace Novak.Northwind.UserInterface
             {
                 lblStatus.Text = ex.Message;
             }
+        }
+
+        private void dgvCustomers_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_bIsFormLoaded)
+                {
+                    CCustomer oCustomer = _oCustomers[dgvCustomers.CurrentRow.Index];
+
+                    PopulateScreen(oCustomer);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = ex.Message;
+            }
+        }
+
+        private void PopulateScreen(CCustomer oCustomer)
+        {
+            txtCustomerID.Text = oCustomer.CustomerID;
+            txtCompanyName.Text = oCustomer.CompanyName;
+            txtContactName.Text = oCustomer.ContactName;
+            txtContactTitle.Text = oCustomer.ContactTitle;
+            txtAddress.Text = oCustomer.Address;
+            txtCity.Text = oCustomer.City;
+            txtRegion.Text = oCustomer.Region;
+            txtPostalCode.Text = oCustomer.PostalCode;
+            txtCountry.Text = oCustomer.Country;
+            txtPhone.Text = oCustomer.Phone;
+            txtFax.Text = oCustomer.Fax;
+            txtSalesRep.Text = oCustomer.SalesRep.ToString();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CCustomer oCustomer = _oCustomers[dgvCustomers.CurrentRow.Index];
+
+                PopulateCustomer(oCustomer);
+
+                oCustomer.Update();
+
+                dgvCustomers.DataSource = null;
+                dgvCustomers.DataSource = _oCustomers.Items;
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = ex.Message;
+            }
+        }
+
+        private void PopulateCustomer(CCustomer oCustomer)
+        {
+            oCustomer.CustomerID = txtCustomerID.Text;
+            oCustomer.CompanyName = txtCompanyName.Text;
+            oCustomer.ContactName = txtContactName.Text;
+            oCustomer.ContactTitle = txtContactTitle.Text;
+            oCustomer.Address = txtAddress.Text;
+            oCustomer.City = txtCity.Text;
+            oCustomer.Region = txtRegion.Text;
+            oCustomer.PostalCode = txtPostalCode.Text;
+            oCustomer.Country = txtCountry.Text;
+            oCustomer.Phone = txtPhone.Text;
+            oCustomer.Fax = txtFax.Text;
+            oCustomer.SalesRep = int.Parse(txtSalesRep.Text);
         }
     }
 }

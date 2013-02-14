@@ -109,7 +109,28 @@ namespace Novak.Northwind.BusinessLayer
         {
             try
             {
-                throw new NotImplementedException();
+                NorthwindDataContext oDc = new NorthwindDataContext();
+
+                tblCustomer otblCustomer = (from c in oDc.tblCustomers
+                                            where c.CustomerID == _CustomerID
+                                            select c).FirstOrDefault();
+
+                otblCustomer.CompanyName = CompanyName;
+                otblCustomer.ContactName = ContactName;
+                otblCustomer.ContactTitle = ContactTitle;
+                otblCustomer.Address = Address;
+                otblCustomer.City = City;
+                otblCustomer.Region = Region;
+                otblCustomer.PostalCode = PostalCode;
+                otblCustomer.Country = Country;
+                otblCustomer.Phone = Phone;
+                otblCustomer.Fax = Fax;
+                otblCustomer.SalesRep = SalesRep;
+
+                oDc.SubmitChanges();
+                oDc = null;
+
+                return 1;
             }
             catch (Exception ex)
             {
