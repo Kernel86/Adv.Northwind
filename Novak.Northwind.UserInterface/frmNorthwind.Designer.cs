@@ -32,8 +32,8 @@
             this.btnSelectAllCustomers = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnGetCustomers = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -61,6 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSalesRep = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtSearchCity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -104,23 +105,25 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button4
+            // btnInsert
             // 
-            this.button4.Location = new System.Drawing.Point(8, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnInsert.Location = new System.Drawing.Point(8, 95);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 23);
+            this.btnInsert.TabIndex = 4;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // button5
+            // btnGetCustomers
             // 
-            this.button5.Location = new System.Drawing.Point(8, 123);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnGetCustomers.Location = new System.Drawing.Point(8, 123);
+            this.btnGetCustomers.Name = "btnGetCustomers";
+            this.btnGetCustomers.Size = new System.Drawing.Size(75, 23);
+            this.btnGetCustomers.TabIndex = 5;
+            this.btnGetCustomers.Text = "Get Customers";
+            this.btnGetCustomers.UseVisualStyleBackColor = true;
+            this.btnGetCustomers.Click += new System.EventHandler(this.btnGetCustomers_Click);
             // 
             // button6
             // 
@@ -338,11 +341,19 @@
             this.label12.TabIndex = 30;
             this.label12.Text = "Sales Rep:";
             // 
+            // txtSearchCity
+            // 
+            this.txtSearchCity.Location = new System.Drawing.Point(98, 232);
+            this.txtSearchCity.Name = "txtSearchCity";
+            this.txtSearchCity.Size = new System.Drawing.Size(233, 20);
+            this.txtSearchCity.TabIndex = 32;
+            // 
             // frmNorthwind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 305);
+            this.Controls.Add(this.txtSearchCity);
             this.Controls.Add(this.txtSalesRep);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtFax);
@@ -369,8 +380,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnGetCustomers);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSelectAllCustomers);
@@ -392,8 +403,8 @@
         private System.Windows.Forms.Button btnSelectAllCustomers;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnGetCustomers;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
@@ -421,6 +432,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSalesRep;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtSearchCity;
     }
 }
 

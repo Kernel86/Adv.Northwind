@@ -125,5 +125,41 @@ namespace Novak.Northwind.UserInterface
             oCustomer.Fax = txtFax.Text;
             oCustomer.SalesRep = int.Parse(txtSalesRep.Text);
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CCustomer oCustomer = new CCustomer();
+
+                oCustomer.CustomerID = txtCustomerID.Text;
+                PopulateCustomer(oCustomer);
+
+                oCustomer.Insert();
+                _oCustomers.Add(oCustomer);
+
+                dgvCustomers.DataSource = null;
+                dgvCustomers.DataSource = _oCustomers.Items;
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = ex.Message;
+            }
+        }
+
+        private void btnGetCustomers_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _oCustomers.SelectCustomerByCity(txtSearchCity.Text);
+                dgvCustomers.DataSource = null;
+                dgvCustomers.DataSource = _oCustomers.Items;
+                _bIsFormLoaded = true;
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = ex.Message;
+            }
+        }
     }
 }

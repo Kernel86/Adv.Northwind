@@ -138,6 +138,37 @@ namespace Novak.Northwind.BusinessLayer
             }
         }
 
+        public void Insert()
+        {
+            try
+            {
+                NorthwindDataContext oDc = new NorthwindDataContext();
+
+                tblCustomer otblCustomer = new tblCustomer();
+
+                otblCustomer.CustomerID = CustomerID;
+                otblCustomer.CompanyName = CompanyName;
+                otblCustomer.ContactName = ContactName;
+                otblCustomer.ContactTitle = ContactTitle;
+                otblCustomer.Address = Address;
+                otblCustomer.City = City;
+                otblCustomer.Region = Region;
+                otblCustomer.PostalCode = PostalCode;
+                otblCustomer.Country = Country;
+                otblCustomer.Phone = Phone;
+                otblCustomer.Fax = Fax;
+                otblCustomer.SalesRep = SalesRep;
+
+                oDc.tblCustomers.InsertOnSubmit(otblCustomer);
+                oDc.SubmitChanges();
+                oDc = null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public bool Delete()
         {
             try
@@ -161,6 +192,35 @@ namespace Novak.Northwind.BusinessLayer
         }
 
         public void Load(tblCustomer otblCustomer)
+        {
+            try
+            {
+                _CustomerID = otblCustomer.CustomerID;
+                _CompanyName = otblCustomer.CompanyName;
+                _ContactName = otblCustomer.ContactName;
+                _ContactTitle = otblCustomer.ContactTitle;
+                _Address = otblCustomer.Address;
+                _City = otblCustomer.City;
+                if (otblCustomer.Region != null)
+                    _Region = otblCustomer.Region;
+                else
+                    _Region = string.Empty;
+                _PostalCode = otblCustomer.PostalCode;
+                _Country = otblCustomer.Country;
+                _Phone = otblCustomer.Phone;
+                _Fax = otblCustomer.Fax;
+                if (otblCustomer.SalesRep != null)
+                    _SalesRep = (int)otblCustomer.SalesRep;
+                else
+                    _SalesRep = 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Load(SP_GetCustomersByCityResult otblCustomer)
         {
             try
             {

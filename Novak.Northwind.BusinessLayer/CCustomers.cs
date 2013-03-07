@@ -54,6 +54,25 @@ namespace Novak.Northwind.BusinessLayer
                 CustomersChanged(this, new EventArgs());
         }
 
+
+        public void SelectCustomerByCity(string city)
+        {
+            NorthwindDataContext oDc = new NorthwindDataContext();
+
+            // Select customers using LINQ
+            var otblCustomers = from c in oDc.SP_GetCustomersByCity(city) select c;
+
+            // Fill generic list of customers
+            foreach (SP_GetCustomersByCityResult otblCustomer in otblCustomers)
+            {
+                CCustomer oCustomer = new CCustomer();
+                oCustomer.Load(otblCustomer);
+                _glItems.Add(oCustomer);
+            }
+
+            oDc = null;
+        }
+
         public void SelectCustomer()
         {
             NorthwindDataContext oDc = new NorthwindDataContext();
