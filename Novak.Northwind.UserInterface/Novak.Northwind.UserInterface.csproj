@@ -11,7 +11,8 @@
     <RootNamespace>Novak.Northwind.UserInterface</RootNamespace>
     <AssemblyName>Novak.Northwind.UserInterface</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -38,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLogIt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIt.Designer.cs">
+      <DependentUpon>frmLogIt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNorthwind.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogIt.resx">
+      <DependentUpon>frmLogIt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNorthwind.resx">
       <DependentUpon>frmNorthwind.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,7 +82,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

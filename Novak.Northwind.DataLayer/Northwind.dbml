@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBNovak" Class="NorthwindDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=FooteSQLServer;Initial Catalog=DBNovak;Persist Security Info=True;User ID=CMLogin" SettingsObjectName="Novak.Northwind.DataLayer.Properties.Settings" SettingsPropertyName="DBNovakConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=vintagesylvania.net,10433;Initial Catalog=DBNovak;Persist Security Info=True;User ID=CMLogin" SettingsObjectName="Novak.Northwind.DataLayer.Properties.Settings" SettingsPropertyName="DBNovakConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Customers" Member="tblCustomers">
     <Type Name="tblCustomer">
       <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

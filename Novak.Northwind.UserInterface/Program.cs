@@ -15,7 +15,7 @@ namespace Novak.Northwind.UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNorthwind());
+            Application.Run(new frmLogIt());
         }
     }
 }

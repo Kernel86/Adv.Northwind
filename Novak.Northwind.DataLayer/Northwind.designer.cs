@@ -36,7 +36,7 @@ namespace Novak.Northwind.DataLayer
     #endregion
 		
 		public NorthwindDataContext() : 
-				base(global::Novak.Northwind.DataLayer.Properties.Settings.Default.DBNovakConnectionString, mappingSource)
+				base(global::Novak.Northwind.DataLayer.Properties.Settings.Default.DBNovakConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

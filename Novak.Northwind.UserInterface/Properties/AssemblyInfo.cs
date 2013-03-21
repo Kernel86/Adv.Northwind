@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 [assembly: AssemblyTitle("Novak.Northwind.UserInterface")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

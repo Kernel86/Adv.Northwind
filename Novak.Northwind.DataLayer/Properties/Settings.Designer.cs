@@ -33,5 +33,16 @@ namespace Novak.Northwind.DataLayer.Properties {
                 return ((string)(this["DBNovakConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=vintagesylvania.net,10433;Initial Catalog=DBNovak;Persist Security In" +
+            "fo=True;User ID=CMLogin;Password=CMLogin")]
+        public string DBNovakConnectionString1 {
+            get {
+                return ((string)(this["DBNovakConnectionString1"]));
+            }
+        }
     }
 }
