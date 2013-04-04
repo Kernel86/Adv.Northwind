@@ -90,5 +90,11 @@ namespace Novak.Northwind.BusinessLayer
 
             oDc = null;
         }
+
+        public string GetConnection()
+        {
+            NorthwindDataContext oDC = new NorthwindDataContext();
+            return oDC.Connection.ConnectionString;
+        }
     }
 }
