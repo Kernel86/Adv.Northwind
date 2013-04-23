@@ -42,8 +42,11 @@
     <Reference Include="log4net">
       <HintPath>..\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsCustomers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomers.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLogIt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,18 @@
     <Compile Include="frmNorthwind.Designer.cs">
       <DependentUpon>frmNorthwind.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport2.Designer.cs">
+      <DependentUpon>frmReport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogIt.resx">
@@ -73,6 +93,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNorthwind.resx">
       <DependentUpon>frmNorthwind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport2.resx">
+      <DependentUpon>frmReport2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,7 +110,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptCustomers.rdlc" />
+    <EmbeddedResource Include="rpwWizard.rdlc" />
     <None Include="app.config" />
+    <None Include="dsCustomers.xsc">
+      <DependentUpon>dsCustomers.xsd</DependentUpon>
+    </None>
+    <None Include="dsCustomers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCustomers.xss">
+      <DependentUpon>dsCustomers.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
