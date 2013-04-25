@@ -20,9 +20,11 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Novak.Northwind.Setup", "No
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novak.Northwind.Web", "Novak.Northwind.Web\Novak.Northwind.Web.csproj", "{80FD09DB-0893-4920-A2D9-248CCADDB6BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novak.Northwind.WPFUI", "Novak.Northwind.WPFUI\Novak.Northwind.WPFUI.csproj", "{06608E54-7FD2-46B2-9F94-F63FA63A0B98}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://shawnnovak.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -44,6 +46,9 @@ Global
 		SccProjectUniqueName6 = Novak.Northwind.Web\\Novak.Northwind.Web.csproj
 		SccProjectName6 = Novak.Northwind.Web
 		SccLocalPath6 = Novak.Northwind.Web
+		SccProjectUniqueName7 = Novak.Northwind.WPFUI\\Novak.Northwind.WPFUI.csproj
+		SccProjectName7 = Novak.Northwind.WPFUI
+		SccLocalPath7 = Novak.Northwind.WPFUI
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Novak.Northwind.vsmdi
@@ -113,6 +118,16 @@ Global
 		{80FD09DB-0893-4920-A2D9-248CCADDB6BE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{80FD09DB-0893-4920-A2D9-248CCADDB6BE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{80FD09DB-0893-4920-A2D9-248CCADDB6BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Debug|x86.ActiveCfg = Debug|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Debug|x86.Build.0 = Debug|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Release|Any CPU.ActiveCfg = Release|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Release|Mixed Platforms.Build.0 = Release|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Release|x86.ActiveCfg = Release|x86
+		{06608E54-7FD2-46B2-9F94-F63FA63A0B98}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
