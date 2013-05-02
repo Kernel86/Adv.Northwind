@@ -77,6 +77,9 @@ namespace Novak.Northwind.UserInterface
 
         private void PopulateScreen(CCustomer oCustomer)
         {
+            ctlEditCustomer1.CustomerId = oCustomer.CustomerID;
+            ctlEditCustomer1.CompanyName = oCustomer.CompanyName;
+
             txtCustomerID.Text = oCustomer.CustomerID;
             txtCompanyName.Text = oCustomer.CompanyName;
             txtContactName.Text = oCustomer.ContactName;

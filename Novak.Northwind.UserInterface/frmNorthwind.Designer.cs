@@ -62,6 +62,7 @@
             this.txtSalesRep = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtSearchCity = new System.Windows.Forms.TextBox();
+            this.ctlEditCustomer1 = new Novak.Northwind.UserInterface.ctlEditCustomer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +139,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 283);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 305);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(917, 22);
             this.statusStrip1.TabIndex = 7;
@@ -348,11 +349,20 @@
             this.txtSearchCity.Size = new System.Drawing.Size(233, 20);
             this.txtSearchCity.TabIndex = 32;
             // 
+            // ctlEditCustomer1
+            // 
+            this.ctlEditCustomer1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ctlEditCustomer1.Location = new System.Drawing.Point(394, 232);
+            this.ctlEditCustomer1.Name = "ctlEditCustomer1";
+            this.ctlEditCustomer1.Size = new System.Drawing.Size(206, 68);
+            this.ctlEditCustomer1.TabIndex = 33;
+            // 
             // frmNorthwind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 305);
+            this.ClientSize = new System.Drawing.Size(917, 327);
+            this.Controls.Add(this.ctlEditCustomer1);
             this.Controls.Add(this.txtSearchCity);
             this.Controls.Add(this.txtSalesRep);
             this.Controls.Add(this.label12);
@@ -433,6 +443,7 @@
         private System.Windows.Forms.TextBox txtSalesRep;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSearchCity;
+        private ctlEditCustomer ctlEditCustomer1;
     }
 }
 

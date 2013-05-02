@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctlEditCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlEditCustomer.Designer.cs">
+      <DependentUpon>ctlEditCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="dsCustomers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctlEditCustomer.resx">
+      <DependentUpon>ctlEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogIt.resx">
       <DependentUpon>frmLogIt.cs</DependentUpon>
     </EmbeddedResource>

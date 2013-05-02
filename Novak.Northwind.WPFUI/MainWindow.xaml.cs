@@ -26,16 +26,16 @@ namespace Novak.Northwind.WPFUI
 
         private void btnShow_Click(object sender, RoutedEventArgs e)
         {
-            List<NorthwindService.CCustomer> oCustomers = new List<NorthwindService.CCustomer>();
+            //List<NorthwindService.CCustomer> oCustomers = new List<NorthwindService.CCustomer>();
 
-            NorthwindService.NorthwindClient oClient = new NorthwindService.NorthwindClient;
+            //NorthwindService.NorthwindClient oClient = new NorthwindService.NorthwindClient();
 
-            oCustomers = oClient.GetCustomers();
+            //oCustomers = oClient.GetCustomers();
 
-            grdCustomers.ItemsSource = null;
-            grdCustomers.ItemsSource = oCustomers;
+            //grdCustomers.ItemsSource = null;
+            //grdCustomers.ItemsSource = oCustomers;
 
-            oClient = null;
+            //oClient = null;
         }
     }
 }
